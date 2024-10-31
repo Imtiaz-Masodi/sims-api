@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: Student Information Management System
+  data:
+    mongodb:
+      uri: mongodb+srv://admin:admin@softtenders.rlhp0.mongodb.net/?retryWrites=true&w=majority&appName=SoftTenders
+      database: sims
+      auto-index-creation: true
+
+  main:
+    allow-circular-references: true
+
+server:
+  port: 8080
+  servlet:
+    context-path: /sims
+
+logging:
+  level:
+    root: INFO
+  app:
+    soft_tenders:
+      sims: DEBUG
+#  file:
+#    name: app.log
+#    path: /var/logs
+#  pattern:
+#    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+#    file: "%d{yyyy-MM-dd} [%thread] %-5level %logger{36} - %msg%n"
+
+jwt:
+  secret_key: "STUD3NT_!NF0RM@T!0N_M@N@G3M3NT_5Y5T3M_53CR3T_K3Y"
+  expiration_time: 3600000
